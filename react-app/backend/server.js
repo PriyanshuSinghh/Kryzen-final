@@ -2,58 +2,55 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5000; 
+const PORT = 4000; 
 
 app.use(cors());
 app.use(express.json());
 
 const data = [
   {
-    productname: "Italian Basil",
-    wholesaleprice: "₹33.80",
-    retailprice: "₹52.00",
-    weekshigh: "₹59.00",
-    weekslow: "₹47.00",
-    trend: "",
-    href: "/",
+    productName: "Italian Basil",
+    imageSrc: "",
+    productLink: "commodities-1",
+    wholesalePrice: "₹33.80",
+    retailPrice: "₹52.00",
+    weeksHigh: "₹59.00",
+    weeksLow: "₹47.00",
+    trend: ""
   },
   {
-    productname: "Swiss Chard",
-    wholesaleprice: "₹31.20",
-    retailprice: "₹48.00",
-    weekshigh: "₹59.00",
-    weekslow: "₹48.00",
-    trend: "",
-    href: "/",
+    productName: "Swiss Chard",
+    wholesalePrice: "₹31.20",
+    retailPrice: "₹48.00",
+    weeksHigh: "₹59.00",
+    weeksLow: "₹48.00",
+    trend: ""
   },
   {
-    productname: "Broccoli",
-    wholesaleprice: "₹29.90",
-    retailprice: "₹46.00",
-    weekshigh: "₹59.00",
-    weekslow: "₹46.00",
-    trend: "",
-    href: "/broccoli",
+    productName: "Broccoli",
+    wholesalePrice: "₹29.90",
+    retailPrice: "₹46.00",
+    weeksHigh: "₹59.00",
+    weeksLow: "₹46.00",
+    trend: ""
+  },
+  {
+    productName: "Kale",
+    wholesalePrice: "₹33.15",
+    retailPrice: "₹51.00",
+    weeksHigh: "₹57.00",
+    weeksLow: "₹46.00",
+    trend: ""
+  },
+  {
+    productName: "Celery",
+    wholesalePrice: "₹29.90",
+    retailPrice: "₹46.00",
+    weeksHigh: "₹57.00",
+    weeksLow: "₹46.00",
+    trend: ""
   },
 
-  {
-    productname: "Kale",
-    wholesaleprice: "₹31.20",
-    retailprice: "₹48.00",
-    weekshigh: "₹59.00",
-    weekslow: "₹48.00",
-    trend: "",
-    href: "/",
-  },
-  {
-    productname: "Celery",
-    wholesaleprice: "₹31.20",
-    retailprice: "₹48.00",
-    weekshigh: "₹59.00",
-    weekslow: "₹48.00",
-    trend: "",
-    href: "/",
-  },
   // Add more data here
 ];
 
@@ -63,7 +60,7 @@ const data = [
 app.get("/api/data", (req, res) => {
   // Pagination parameters
   const page = parseInt(req.query.page) || 1; // Default to page 1 if not specified
-  const elementsPerPage = 10;
+  const elementsPerPage = 5;
   const startIndex = (page - 1) * elementsPerPage;
   const endIndex = startIndex + elementsPerPage;
 

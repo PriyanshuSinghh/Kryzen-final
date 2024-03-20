@@ -6,6 +6,8 @@ import Home from './components/home';
 import NavigationBar from './components/NavigationBar';
 import Pricewatcher from './components/Pricewatcher';
 import Footer from './components/footer';
+import Table from './components/table';
+
 
 
 
@@ -18,6 +20,8 @@ function App() {
 <Route path='/NavigationBar' element={<NavigationBar />}/>
 <Route path='/Pricewatcher' element={<Pricewatcher />}/>
 <Route path='/Footer' element={<Footer />}/>
+<Route path='/table' element={<Table />}/>
+
 
 
 
