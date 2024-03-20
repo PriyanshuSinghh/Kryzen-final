@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Tabletable = () => {
+const Table = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +11,7 @@ const Tabletable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/data");
+        const response = await fetch("http://localhost:5000/api/data");
 
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -93,7 +93,7 @@ const Tabletable = () => {
                               {currentElements.map((item, index) => (
                                 <tr key={index}>
                                   <td>
-                                    <a href="/broccoli">
+                                    <a href="/">
                                     {item.productname}
                                     </a>
                                     </td>
@@ -196,4 +196,4 @@ const Tabletable = () => {
   );
 };
 
-export default Tabletable;
+export default Table;
