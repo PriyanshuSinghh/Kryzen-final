@@ -445,8 +445,9 @@ export default function Pricewatcher() {
                       />
                     </td>
 
-                    <td>Broccoli</td>
-
+                 
+                      <td>Broccoli</td>
+                    
                     <td>₹29.90</td>
                     <td>₹46.00</td>
                     <td>₹59.00</td>
