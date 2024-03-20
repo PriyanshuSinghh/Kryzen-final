@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBar from "./NavigationBar";
+import Footer from "./footer";
 
 export default function Pricewatcher() {
   return (
