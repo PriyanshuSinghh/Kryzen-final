@@ -5,7 +5,6 @@ import Welcome from './components/Welcome';
 import Home from './components/home';
 import NavigationBar from './components/NavigationBar';
 import Pricewatcher from './components/Pricewatcher';
-import Tabletable from './components/table';
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
 <Route path='/Pricewatcher' element={<Pricewatcher />}/>
 
 
-<Route path='/table' element={<Tabletable />}/>
 
 
 
