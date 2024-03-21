@@ -10,7 +10,6 @@ app.use(express.json());
 // Data
 const data = [
   {
-  
     productname: "Italian Basil",
     wholesaleprice: "₹33.80",
     retailprice: "₹52.00",
