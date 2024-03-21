@@ -393,7 +393,334 @@ const broccolidata = [
   },
 ];
 
-
+const italianBassil = [
+  {
+    date: "7 Mar 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "6 Mar 2024",
+    retailprice: "₹49.00",
+    wholesaleprice: "₹31.00 - ₹33.00",
+    priceatfarm: "₹32.00 - ₹29.00",
+  },
+  {
+    date: "5 Mar 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "4 Mar 2024",
+    retailprice: "₹55.00",
+    wholesaleprice: "₹35.00 - ₹37.00",
+    priceatfarm: "₹36.00 - ₹33.00",
+  },
+  {
+    date: "3 Mar 2024",
+    retailprice: "₹54.00",
+    wholesaleprice: "₹34.00 - ₹37.00",
+    priceatfarm: "₹35.00 - ₹32.00",
+  },
+  {
+    date: "2 Mar 2024",
+    retailprice: "₹59.00",
+    wholesaleprice: "₹37.00 - ₹40.00",
+    priceatfarm: "₹38.00 - ₹35.00",
+  },
+  {
+    date: "1 Mar 2024",
+    retailprice: "₹55.00",
+    wholesaleprice: "₹35.00 - ₹37.00",
+    priceatfarm: "₹36.00 - ₹33.00",
+  },
+  {
+    date: "29 Feb 2024",
+    retailprice: "₹57.00",
+    wholesaleprice: "₹36.00 - ₹39.00",
+    priceatfarm: "₹37.00 - ₹34.00",
+  },
+  {
+    date: "28 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "27 Feb 2024",
+    retailprice: "₹52.00",
+    wholesaleprice: "₹33.00 - ₹35.00",
+    priceatfarm: "₹34.00 - ₹31.00",
+  },
+  {
+    date: "26 Feb 2024",
+    retailprice: "₹51.00",
+    wholesaleprice: "₹32.00 - ₹35.00",
+    priceatfarm: "₹33.00 - ₹31.00",
+  },
+  {
+    date: "25 Feb 2024",
+    retailprice: "₹50.00",
+    wholesaleprice: "₹32.00 - ₹34.00",
+    priceatfarm: "₹33.00 - ₹30.00",
+  },
+  {
+    date: "24 Feb 2024",
+    retailprice: "₹47.00",
+    wholesaleprice: "₹30.00 - ₹32.00",
+    priceatfarm: "₹31.00 - ₹28.00",
+  },
+  {
+    date: "23 Feb 2024",
+    retailprice: "₹52.00",
+    wholesaleprice: "₹33.00 - ₹35.00",
+    priceatfarm: "₹34.00 - ₹31.00",
+  },
+  {
+    date: "22 Feb 2024",
+    retailprice: "₹56.00",
+    wholesaleprice: "₹35.00 - ₹38.00",
+    priceatfarm: "₹36.00 - ₹34.00",
+  },
+  {
+    date: "21 Feb 2024",
+    retailprice: "₹49.00",
+    wholesaleprice: "₹31.00 - ₹33.00",
+    priceatfarm: "₹32.00 - ₹29.00",
+  },
+  {
+    date: "20 Feb 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "19 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "18 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "17 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "16 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "15 Feb 2024",
+    retailprice: "₹54.00",
+    wholesaleprice: "₹34.00 - ₹37.00",
+    priceatfarm: "₹35.00 - ₹32.00",
+  },
+  {
+    date: "14 Feb 2024",
+    retailprice: "₹54.00",
+    wholesaleprice: "₹34.00 - ₹37.00",
+    priceatfarm: "₹35.00 - ₹32.00",
+  },
+  {
+    date: "13 Feb 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "12 Feb 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "11 Feb 2024",
+    retailprice: "₹48.00",
+    wholesaleprice: "₹30.00 - ₹33.00",
+    priceatfarm: "₹31.00 - ₹29.00",
+  },
+  {
+    date: "10 Feb 2024",
+    retailprice: "₹47.00",
+    wholesaleprice: "₹30.00 - ₹32.00",
+    priceatfarm: "₹31.00 - ₹28.00",
+  },
+];
+const swisschard = [
+  {
+    date: "7 Mar 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "6 Mar 2024",
+    retailprice: "₹49.00",
+    wholesaleprice: "₹31.00 - ₹33.00",
+    priceatfarm: "₹32.00 - ₹29.00",
+  },
+  {
+    date: "5 Mar 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "4 Mar 2024",
+    retailprice: "₹55.00",
+    wholesaleprice: "₹35.00 - ₹37.00",
+    priceatfarm: "₹36.00 - ₹33.00",
+  },
+  {
+    date: "3 Mar 2024",
+    retailprice: "₹54.00",
+    wholesaleprice: "₹34.00 - ₹37.00",
+    priceatfarm: "₹35.00 - ₹32.00",
+  },
+  {
+    date: "2 Mar 2024",
+    retailprice: "₹59.00",
+    wholesaleprice: "₹37.00 - ₹40.00",
+    priceatfarm: "₹38.00 - ₹35.00",
+  },
+  {
+    date: "1 Mar 2024",
+    retailprice: "₹55.00",
+    wholesaleprice: "₹35.00 - ₹37.00",
+    priceatfarm: "₹36.00 - ₹33.00",
+  },
+  {
+    date: "29 Feb 2024",
+    retailprice: "₹57.00",
+    wholesaleprice: "₹36.00 - ₹39.00",
+    priceatfarm: "₹37.00 - ₹34.00",
+  },
+  {
+    date: "28 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "27 Feb 2024",
+    retailprice: "₹52.00",
+    wholesaleprice: "₹33.00 - ₹35.00",
+    priceatfarm: "₹34.00 - ₹31.00",
+  },
+  {
+    date: "26 Feb 2024",
+    retailprice: "₹51.00",
+    wholesaleprice: "₹32.00 - ₹35.00",
+    priceatfarm: "₹33.00 - ₹31.00",
+  },
+  {
+    date: "25 Feb 2024",
+    retailprice: "₹50.00",
+    wholesaleprice: "₹32.00 - ₹34.00",
+    priceatfarm: "₹33.00 - ₹30.00",
+  },
+  {
+    date: "24 Feb 2024",
+    retailprice: "₹47.00",
+    wholesaleprice: "₹30.00 - ₹32.00",
+    priceatfarm: "₹31.00 - ₹28.00",
+  },
+  {
+    date: "23 Feb 2024",
+    retailprice: "₹52.00",
+    wholesaleprice: "₹33.00 - ₹35.00",
+    priceatfarm: "₹34.00 - ₹31.00",
+  },
+  {
+    date: "22 Feb 2024",
+    retailprice: "₹56.00",
+    wholesaleprice: "₹35.00 - ₹38.00",
+    priceatfarm: "₹36.00 - ₹34.00",
+  },
+  {
+    date: "21 Feb 2024",
+    retailprice: "₹49.00",
+    wholesaleprice: "₹31.00 - ₹33.00",
+    priceatfarm: "₹32.00 - ₹29.00",
+  },
+  {
+    date: "20 Feb 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "19 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "18 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "17 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "16 Feb 2024",
+    retailprice: "₹53.00",
+    wholesaleprice: "₹33.00 - ₹36.00",
+    priceatfarm: "₹34.00 - ₹32.00",
+  },
+  {
+    date: "15 Feb 2024",
+    retailprice: "₹54.00",
+    wholesaleprice: "₹34.00 - ₹37.00",
+    priceatfarm: "₹35.00 - ₹32.00",
+  },
+  {
+    date: "14 Feb 2024",
+    retailprice: "₹54.00",
+    wholesaleprice: "₹34.00 - ₹37.00",
+    priceatfarm: "₹35.00 - ₹32.00",
+  },
+  {
+    date: "13 Feb 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "12 Feb 2024",
+    retailprice: "₹46.00",
+    wholesaleprice: "₹29.00 - ₹31.00",
+    priceatfarm: "₹30.00 - ₹28.00",
+  },
+  {
+    date: "11 Feb 2024",
+    retailprice: "₹48.00",
+    wholesaleprice: "₹30.00 - ₹33.00",
+    priceatfarm: "₹31.00 - ₹29.00",
+  },
+  {
+    date: "10 Feb 2024",
+    retailprice: "₹47.00",
+    wholesaleprice: "₹30.00 - ₹32.00",
+    priceatfarm: "₹31.00 - ₹28.00",
+  },
+];
 
 app.get("/api/data", (req, res) => {
   try {
@@ -417,9 +744,23 @@ app.get("/api/broccolidata", (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+app.get("/api/italianBassil", (req, res) => {
+  try {
+    res.json(italianBassil);
+  } catch (error) {
+    console.error("Error fetching italianBassil data:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
-
-
+app.get("/api/swisschard", (req, res) => {
+  try {
+    res.json(swisschard);
+  } catch (error) {
+    console.error("Error fetching swisschard data:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

@@ -1,34 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import LineChart from '../components/chart';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import LineChart from "../components/chart"; // Assuming this is a custom component for rendering a line chart
+import axios from "axios";
+import NavigationBar from "../components/NavigationBar";
+import Footer from "../components/footer";
 
 export default function Broccoli() {
-    const [broccolidata, setbroccolidata] = useState([]);
+  // State to hold broccoli data
+  const [broccoliData, setBroccoliData] = useState([]);
 
-    useEffect(() => {
-        const fetchbroccolidata = async () => {
-            try {
-                const response = await axios.get("http://localhost:4000/api/broccolidata");
-                if (!response.ok) {
-                    throw new Error('Failed to fetch broccoli data');
-                }
-                const data = await response.json();
-                // Extract broccolidata array from combined data object
-                const { broccolidata } = data;
-                setbroccolidata(broccolidata);
-            } catch (error) {
-              console.error('Error fetching broccoli data:', error.message);
-            }
-        };
+  useEffect(() => {
+    // Function to fetch broccoli data
+    const fetchBroccoliData = async () => {
+      try {
+        // Fetch data from server
+        const response = await axios.get(
+          "http://localhost:4000/api/broccolidata"
+        );
+        // Check if request was successful
+        if (response.status !== 200) {
+          throw new Error("Failed to fetch broccoli data");
+        }
+        // Set broccoli data to state
+        setBroccoliData(response.data);
+      } catch (error) {
+        // Log error if request fails
+        console.error("Error fetching broccoli data:", error.message);
+      }
+    };
 
-        fetchbroccolidata();
-    }, []);
+    // Call fetchBroccoliData function
+    fetchBroccoliData();
+  }, []); // Empty dependency array ensures useEffect runs only once, similar to componentDidMount
 
-    // Ensure broccolidata is an array before mapping over it
-   
-    return (
+  // Render the component
+  return (
+  
+    <div className="page-wrapper">
 
-      <div className="page-wrapper">
+
+      <div>
+        <NavigationBar/>
+      </div>
+      {/* Page header */}
       <div className="page-header d-print-none">
         <div className="container">
           <div className="row g-3 align-items-center">
@@ -45,32 +58,173 @@ export default function Broccoli() {
           </div>
         </div>
       </div>
+      <div>
+      <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-sm-6 col-lg-3 mb-4">
+          <div className="card card-sm shadow">
+            <div className="card-body">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <span className="bg-yellow text-white stamp mr-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon ml-1"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="3 7 9 13 13 9 21 17"></polyline>
+                      <polyline points="21 10 21 17 14 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div className="col">
+                  <div className="font-weight-medium">₹52.00 Today Retail</div>
+                  <div className="text-secondary">Online</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-     <LineChart/>
-      
+        <div className="col-sm-6 col-lg-3 mb-4">
+          <div className="card card-sm shadow">
+            <div className="card-body">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <span className="bg-yellow text-white stamp mr-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon ml-1"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="3 7 9 13 13 9 21 17"></polyline>
+                      <polyline points="21 10 21 17 14 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div className="col">
+                  <div className="font-weight-medium">
+                    ₹33.80 Today Wholesale
+                  </div>
+                  <div className="text-secondary">Offline</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-sm-6 col-lg-3 mb-4">
+          <div className="card card-sm shadow">
+            <div className="card-body">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <span className="bg-green text-white stamp mr-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon ml-1"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="3 17 9 11 13 15 21 7"></polyline>
+                      <polyline points="14 7 21 7 21 14"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div className="col">
+                  <div className="font-weight-medium">
+                    ₹59.00 Week Highest
+                  </div>
+                  <div className="text-secondary">(Wholesale)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-sm-6 col-lg-3 mb-4">
+          <div className="card card-sm shadow">
+            <div className="card-body">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <span className="bg-yellow text-white stamp mr-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon ml-1"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="3 7 9 13 13 9 21 17"></polyline>
+                      <polyline points="21 10 21 17 14 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div className="col">
+                  <div className="font-weight-medium">
+                    ₹47.00 Week Lowest
+                  </div>
+                  <div className="text-secondary">(Wholesale)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      {/* Render the LineChart component */}
+      <LineChart />
+
       {/* Page body */}
       <div className="page-body">
         <div className="container-xl">
           <div className="row row-cards">
-            
-
             <div className="col-12">
               <div className="card">
                 <div className="card-table table-responsive">
+                  {/* Render broccoli data in a table */}
                   <table className="table">
                     <thead>
                       <tr>
-                        <th>DATE </th>
-                        <th>RETAIL PRICE </th>
-                        <th>WHOLESALE PRICE </th>
+                        <th>DATE</th>
+                        <th>RETAIL PRICE</th>
+                        <th>WHOLESALE PRICE</th>
                         <th>PRICE AT FARM</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {/* Map over broccolidata and generate table rows */}
-                      {broccolidata.map((item, index) => (
+                      {/* Map over broccoliData and generate table rows */}
+                      {broccoliData.map((item, index) => (
                         <tr key={index}>
-                          <td>{item.data}</td>
+                          <td>{item.date}</td>
                           <td>{item.retailprice}</td>
                           <td>{item.wholesaleprice}</td>
                           <td>{item.priceatfarm}</td>
@@ -84,39 +238,11 @@ export default function Broccoli() {
           </div>
         </div>
       </div>
-      <footer className="footer">
-        <div className="container">
-          <div className="row align-items-center flex-row-reverse">
-            <div className="col col-auto ml-auto">
-              <div className="row align-items-center"></div>
-            </div>
-            <div className="col col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              <div className="text-center">
-                Copyright © 2024 Kryzen Biotech. All rights reserved.
-                <br />
-                Made in India with{" "}
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="far"
-                  data-icon="heart"
-                  className="svg-inline--fa fa-heart fa-w-16 icon text-danger"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                  ></path>
-                </svg>
-                .
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
 
-      );
+     <div>
+      <Footer/>
+     </div>
+    </div>
+    </div>
+  );
 }

@@ -18,7 +18,7 @@ const LineChart = () => {
 
                 // Set chart data
                 setChartData({
-                    labels: broccolidata.map(item => item.data),
+                    labels: broccolidata.map(item => item.date),
                     datasets: [{
                         label: 'Retail Price (Per Kg)',
                         data: retailPrices
@@ -57,8 +57,8 @@ const LineChart = () => {
     }, [chartData]);
 
     return (
-        <div className="card" style={{ width: '500px', float: 'right', marginRight: '20px', marginLeft: '800px' }}>
-            <div className="text-center">
+        <div className="text-center" style={{ marginTop: '25px' }}>
+            <div className="card" style={{ width: '80%', margin: '0 auto' }}>
                 <div className="card-body">
                     <canvas ref={chartRef}></canvas>
                 </div>

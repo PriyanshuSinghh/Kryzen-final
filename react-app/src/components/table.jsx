@@ -5,6 +5,8 @@ const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [loadingNextPage, setLoadingNextPage] = useState(false); // State for loading next page
+  const [loadingPreviousPage, setLoadingPreviousPage] = useState(false); // State for loading previous page
 
   const elementsPerPage = 8; // Number of elements per page
 
@@ -39,20 +41,23 @@ const Table = () => {
   // Calculate total number of pages
   const totalPages = Math.ceil(data.length / elementsPerPage);
 
-// Calculate index range for current page
-const startIndex = (currentPage - 1) * elementsPerPage;
-const endIndex = Math.min(startIndex + elementsPerPage, data.length);
-
+  // Calculate index range for current page
+  const startIndex = (currentPage - 1) * elementsPerPage;
+  const endIndex = Math.min(startIndex + elementsPerPage, data.length);
 
   // Get elements for current page
   const currentElements = data.slice(startIndex, endIndex);
 
-  const goToPreviousPage = () => {
+  const goToPreviousPage = async () => {
+    setLoadingPreviousPage(true); // Set loading state
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+    setLoadingPreviousPage(false); // Reset loading state after setting currentPage
   };
 
-  const goToNextPage = () => {
+  const goToNextPage = async () => {
+    setLoadingNextPage(true); // Set loading state
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+    setLoadingNextPage(false); // Reset loading state after setting currentPage
   };
 
   return (
@@ -95,9 +100,9 @@ const endIndex = Math.min(startIndex + elementsPerPage, data.length);
                                 <tr key={index}>
                                   <td>
                                     <a href={`/${item.productname.toLowerCase()}`}>
-                                    {item.productname}
+                                      {item.productname}
                                     </a>
-                                    </td>
+                                  </td>
                                   <td>{item.wholesaleprice}</td>
                                   <td>{item.retailprice}</td>
                                   <td>{item.weekshigh}</td>
@@ -113,7 +118,7 @@ const endIndex = Math.min(startIndex + elementsPerPage, data.length);
                               disabled={currentPage === 1}
                               onClick={goToPreviousPage}
                             >
-                              Previous
+                              {loadingPreviousPage ? 'Loading...' : 'Previous'}
                             </button>
                             <span>
                               Page {currentPage} of {totalPages}
@@ -123,7 +128,7 @@ const endIndex = Math.min(startIndex + elementsPerPage, data.length);
                               disabled={currentPage === totalPages}
                               onClick={goToNextPage}
                             >
-                              Next
+                              {loadingNextPage ? 'Loading...' : 'Next'}
                             </button>
                           </div>
 
@@ -159,10 +164,6 @@ const endIndex = Math.min(startIndex + elementsPerPage, data.length);
           </div>
         </div>
       </div>
-
-
-    
-
     </>
   );
 };

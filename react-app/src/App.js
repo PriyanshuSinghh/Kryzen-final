@@ -8,6 +8,7 @@ import Pricewatcher from './components/Pricewatcher';
 import Footer from './components/footer';
 import Table from './components/table';
 import Layout from './components/layout';
+import ItalianBassil from './vegetables/italianBassil';
 
 import Broccoli from './vegetables/broccoli';
 
@@ -23,6 +24,8 @@ function App() {
 <Route path='/table' element={<Table />}/>
 <Route path='/layout' element={<Layout  />}/>
 <Route path='/broccoli' element={<Broccoli  />}/>
+<Route path='/italianBassil' element={<ItalianBassil  />}/>
+
 
 
 
