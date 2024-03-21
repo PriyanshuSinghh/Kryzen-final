@@ -94,7 +94,7 @@ const endIndex = Math.min(startIndex + elementsPerPage, data.length);
                               {currentElements.map((item, index) => (
                                 <tr key={index}>
                                   <td>
-                                    <a href="/broccoli">
+                                    <a href={`/${item.productname.toLowerCase()}`}>
                                     {item.productname}
                                     </a>
                                     </td>

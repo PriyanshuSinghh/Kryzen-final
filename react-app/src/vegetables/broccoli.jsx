@@ -15,11 +15,10 @@ export default function Broccoli() {
                 const data = await response.json();
                 // Extract broccolidata array from combined data object
                 const { broccolidata } = data;
-                console.log(broccoliData);
                 setBroccoliData(broccolidata);
             } catch (error) {
-              console.error('Error fetching broccoli data:', error);
-          }
+              console.error('Error fetching broccoli data:', error.message);
+            }
         };
 
         fetchBroccoliData();
