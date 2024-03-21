@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function Italianbasil() {
   return (
 <div className="page-wrapper">

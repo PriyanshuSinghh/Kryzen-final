@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import LineChart from '../components/chart';
+import axios from 'axios';
 
 export default function Broccoli() {
     const [broccoliData, setBroccoliData] = useState([]);
@@ -6,24 +8,28 @@ export default function Broccoli() {
     useEffect(() => {
         const fetchBroccoliData = async () => {
             try {
-                const response = await fetch("http://localhost:4000/api/broccolidata");
+                const response = await axios.get("http://localhost:4000/api/broccolidata");
                 if (!response.ok) {
                     throw new Error('Failed to fetch broccoli data');
                 }
                 const data = await response.json();
                 // Extract broccolidata array from combined data object
                 const { broccolidata } = data;
+                console.log(broccoliData);
                 setBroccoliData(broccolidata);
             } catch (error) {
-                console.error('Error fetching broccoli data:', error);
-            }
+              console.error('Error fetching broccoli data:', error);
+          }
         };
 
         fetchBroccoliData();
     }, []);
 
+    // Ensure broccoliData is an array before mapping over it
+   
     return (
-        <div className="page-wrapper">
+
+      <div className="page-wrapper">
       <div className="page-header d-print-none">
         <div className="container">
           <div className="row g-3 align-items-center">
@@ -41,6 +47,7 @@ export default function Broccoli() {
         </div>
       </div>
 
+     <LineChart/>
       
       {/* Page body */}
       <div className="page-body">
@@ -111,5 +118,6 @@ export default function Broccoli() {
         </div>
       </footer>
     </div>
-  );
+
+      );
 }
