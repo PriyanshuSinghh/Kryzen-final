@@ -3,10 +3,10 @@ import LineChart from '../components/chart';
 import axios from 'axios';
 
 export default function Broccoli() {
-    const [broccoliData, setBroccoliData] = useState([]);
+    const [broccolidata, setbroccolidata] = useState([]);
 
     useEffect(() => {
-        const fetchBroccoliData = async () => {
+        const fetchbroccolidata = async () => {
             try {
                 const response = await axios.get("http://localhost:4000/api/broccolidata");
                 if (!response.ok) {
@@ -15,16 +15,16 @@ export default function Broccoli() {
                 const data = await response.json();
                 // Extract broccolidata array from combined data object
                 const { broccolidata } = data;
-                setBroccoliData(broccolidata);
+                setbroccolidata(broccolidata);
             } catch (error) {
               console.error('Error fetching broccoli data:', error.message);
             }
         };
 
-        fetchBroccoliData();
+        fetchbroccolidata();
     }, []);
 
-    // Ensure broccoliData is an array before mapping over it
+    // Ensure broccolidata is an array before mapping over it
    
     return (
 
@@ -67,8 +67,8 @@ export default function Broccoli() {
                       </tr>
                     </thead>
                     <tbody>
-                      {/* Map over broccoliData and generate table rows */}
-                      {broccoliData.map((item, index) => (
+                      {/* Map over broccolidata and generate table rows */}
+                      {broccolidata.map((item, index) => (
                         <tr key={index}>
                           <td>{item.data}</td>
                           <td>{item.retailprice}</td>
