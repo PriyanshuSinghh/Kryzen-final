@@ -308,7 +308,7 @@ export default function NavigationBar() {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="./form-elements.html">
+                    <a className="nav-link" href="./">
                       <span className="nav-link-icon d-md-none d-lg-inline-block"></span>
                       <span className="nav-link-title"> 🙋🏽‍♂️ Buyer Connect </span>
                     </a>

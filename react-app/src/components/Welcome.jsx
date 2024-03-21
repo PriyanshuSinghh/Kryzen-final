@@ -11,7 +11,7 @@ export default function Welcome() {
           <img src="https://app.kryzen.com/packs/media/images/kryzen-logo2-3500bcbbdeb667df12ee3d574941ce09.png" width="300" height="150" alt="Tabler" className="navbar-brand-image"/>
         </a>
       </div>
-      <form className="card card-md" action="./NavigationBar" method="get" autocomplete="off" novalidate="">
+      <form className="card card-md" action="./Layout" method="get" autocomplete="off" novalidate="">
         <div className="card-body">
           <h2 className="card-title text-center mb-4">Log in to your account</h2>
           
@@ -34,7 +34,7 @@ export default function Welcome() {
             
           </div>
           <div className="form-footer">
-           <a href="/Home"> <button type="submit" className="btn btn-primary w-100" fdprocessedid="yi5r1k">Sign in</button></a>
+           <a href="/Layout"> <button type="submit" className="btn btn-primary w-100" fdprocessedid="yi5r1k">Sign in</button></a>
           </div>
         </div>
       </form>
