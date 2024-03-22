@@ -57,13 +57,15 @@ const LineChart = () => {
     }, [chartData]);
 
     return (
-        <div className="text-center" style={{ marginTop: '25px' }}>
-    <div className="card" style={{ width: '60%', margin: '0 auto' }}> 
+<div className="text-center" style={{ marginTop: '25px', marginRight: '110px', display: 'flex', justifyContent: 'flex-end' }}>
+    <div className="card" style={{ width: '50%' }}>
         <div className="card-body">
             <canvas ref={chartRef}></canvas>
         </div>
     </div>
 </div>
+
+    
 
     );
 };

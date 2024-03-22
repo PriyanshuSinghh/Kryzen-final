@@ -225,6 +225,167 @@ const data = [
   href: "/",
 
 },
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+{
+  productname: "Methi",
+  wholesaleprice: "₹40.95",
+  retailprice: "₹63.00",
+  weekshigh: "₹83.00",
+  weekslow: "₹63.00",
+  trend: "",
+  href: "/",
+
+},
+
 
   // Add more data here
 ];
