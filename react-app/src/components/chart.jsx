@@ -58,12 +58,13 @@ const LineChart = () => {
 
     return (
         <div className="text-center" style={{ marginTop: '25px' }}>
-            <div className="card" style={{ width: '80%', margin: '0 auto' }}>
-                <div className="card-body">
-                    <canvas ref={chartRef}></canvas>
-                </div>
-            </div>
+    <div className="card" style={{ width: '60%', margin: '0 auto' }}> 
+        <div className="card-body">
+            <canvas ref={chartRef}></canvas>
         </div>
+    </div>
+</div>
+
     );
 };
 
