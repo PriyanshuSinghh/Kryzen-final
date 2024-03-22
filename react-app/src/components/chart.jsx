@@ -1,73 +1,79 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Chart from 'chart.js/auto';
-import axios from 'axios';
+import React, { useEffect, useRef, useState } from "react";
+import Chart from "chart.js/auto";
+import axios from "axios";
 
 const LineChart = () => {
-    const chartRef = useRef(null);
-    const [chartData, setChartData] = useState(null);
+  const chartRef = useRef(null);
+  const [chartData, setChartData] = useState(null);
 
-    useEffect(() => {
-        // Fetch broccoli data from the server
-        const fetchData = async () => {
-            try {
-                const response = await axios.get("http://localhost:4000/api/broccolidata");
-                const broccolidata = response.data;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:4000/api/broccolidata"
+        );
+        const broccolidata = response.data;
 
-                // Extract retail prices from broccolidata
-                const retailPrices = broccolidata.map(item => parseFloat(item.retailprice.replace('₹', '').trim()));
+        const retailPrices = broccolidata.map((item) =>
+          parseFloat(item.retailprice.replace("₹", "").trim())
+        );
 
-                // Set chart data
-                setChartData({
-                    labels: broccolidata.map(item => item.date),
-                    datasets: [{
-                        label: 'Retail Price (Per Kg)',
-                        data: retailPrices
-                    }]
-                });
-            } catch (error) {
-                console.error('Error fetching broccoli data:', error);
-            }
-        };
+        setChartData({
+          labels: broccolidata.map((item) => item.date),
+          datasets: [
+            {
+              label: "Retail Price (Per Kg)",
+              data: retailPrices,
+            },
+          ],
+        });
+      } catch (error) {
+        console.error("Error fetching broccoli data:", error);
+      }
+    };
 
-        fetchData();
-    }, []);
+    fetchData();
+  }, []);
 
-    useEffect(() => {
-        if (chartData) {
-            // Create the chart once data is available
-            const myChart = new Chart(chartRef.current, {
-                type: 'line',
-                data: chartData,
-                options: {
-                    scales: {
-                        y: {
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                }
-            });
+  useEffect(() => {
+    if (chartData) {
+      const myChart = new Chart(chartRef.current, {
+        type: "line",
+        data: chartData,
+        options: {
+          scales: {
+            y: {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          },
+        },
+      });
 
-            // Cleanup function to destroy the chart when component unmounts
-            return () => {
-                myChart.destroy();
-            };
-        }
-    }, [chartData]);
+      return () => {
+        myChart.destroy();
+      };
+    }
+  }, [chartData]);
 
-    return (
-<div className="text-center" style={{ marginTop: '25px', marginRight: '110px', display: 'flex', justifyContent: 'flex-end' }}>
-    <div className="card" style={{ width: '50%' }}>
+  return (
+    <div
+      className="text-center"
+      style={{
+        marginTop: "25px",
+        marginRight: "115px",
+        display: "flex",
+        justifyContent: "flex-end",
+      }}
+    >
+      <div className="card" style={{ width: "50%" }}>
         <div className="card-body">
-            <canvas ref={chartRef}></canvas>
+          <canvas ref={chartRef}></canvas>
         </div>
+      </div>
     </div>
-</div>
-
-    
-
-    );
+  );
 };
 
 export default LineChart;

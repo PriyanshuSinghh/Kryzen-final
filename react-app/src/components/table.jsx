@@ -5,10 +5,10 @@ const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [loadingNextPage, setLoadingNextPage] = useState(false); // State for loading next page
-  const [loadingPreviousPage, setLoadingPreviousPage] = useState(false); // State for loading previous page
+  const [loadingNextPage, setLoadingNextPage] = useState(false);
+  const [loadingPreviousPage, setLoadingPreviousPage] = useState(false); 
 
-  const elementsPerPage = 8; // Number of elements per page
+  const elementsPerPage = 8; 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,26 +38,23 @@ const Table = () => {
     return <div>Error: {error}</div>;
   }
 
-  // Calculate total number of pages
   const totalPages = Math.ceil(data.length / elementsPerPage);
 
-  // Calculate index range for current page
   const startIndex = (currentPage - 1) * elementsPerPage;
   const endIndex = Math.min(startIndex + elementsPerPage, data.length);
 
-  // Get elements for current page
   const currentElements = data.slice(startIndex, endIndex);
 
   const goToPreviousPage = async () => {
-    setLoadingPreviousPage(true); // Set loading state
+    setLoadingPreviousPage(true); 
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
-    setLoadingPreviousPage(false); // Reset loading state after setting currentPage
+    setLoadingPreviousPage(false); 
   };
 
   const goToNextPage = async () => {
-    setLoadingNextPage(true); // Set loading state
+    setLoadingNextPage(true); 
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
-    setLoadingNextPage(false); // Reset loading state after setting currentPage
+    setLoadingNextPage(false); 
   };
 
   return (
@@ -99,7 +96,9 @@ const Table = () => {
                               {currentElements.map((item, index) => (
                                 <tr key={index}>
                                   <td>
-                                    <a href={`/${item.productname.toLowerCase()}`}>
+                                    <a
+                                      href={`/${item.productname.toLowerCase()}`}
+                                    >
                                       {item.productname}
                                     </a>
                                   </td>
@@ -118,7 +117,7 @@ const Table = () => {
                               disabled={currentPage === 1}
                               onClick={goToPreviousPage}
                             >
-                              {loadingPreviousPage ? 'Loading...' : 'Previous'}
+                              {loadingPreviousPage ? "Loading..." : "Previous"}
                             </button>
                             <span>
                               Page {currentPage} of {totalPages}
@@ -128,7 +127,7 @@ const Table = () => {
                               disabled={currentPage === totalPages}
                               onClick={goToNextPage}
                             >
-                              {loadingNextPage ? 'Loading...' : 'Next'}
+                              {loadingNextPage ? "Loading..." : "Next"}
                             </button>
                           </div>
 

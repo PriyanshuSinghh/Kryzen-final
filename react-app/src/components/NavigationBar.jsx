@@ -183,7 +183,6 @@ export default function NavigationBar() {
                             </div>
                             <div className="col-auto">
                               <a href="/" className="list-group-item-actions">
-                                {/*<!-- Download SVG icon from http://tabler-icons.io/i/star -->*/}
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   className="icon text-muted"

@@ -34,12 +34,9 @@ export default function ItalianBassil() {
 
   // Render the component
   return (
-  
     <div className="page-wrapper">
-
-
       <div>
-        <NavigationBar/>
+        <NavigationBar />
       </div>
       {/* Page header */}
       <div className="page-header d-print-none">
@@ -60,7 +57,7 @@ export default function ItalianBassil() {
       </div>
       <div>
         <div className="row row-cards">
-          <div className="col-sm-6 col-lg-3" >
+          <div className="col-sm-6 col-lg-3">
             <div className="card card-sm">
               <div className="card-body">
                 <div className="row align-items-center">
@@ -235,9 +232,9 @@ export default function ItalianBassil() {
         </div>
       </div>
 
-     <div>
-      <Footer/>
-     </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
