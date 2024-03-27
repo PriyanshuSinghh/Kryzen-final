@@ -12,7 +12,7 @@ const LineChart = () => {
         const response = await axios.get(
           "http://localhost:4000/api/broccolidata"
         );
-        const broccolidata = response.data;
+        const broccolidata = response.data.reverse(); // Reverse the data
 
         const retailPrices = broccolidata.map((item) =>
           parseFloat(item.retailprice.replace("₹", "").trim())
