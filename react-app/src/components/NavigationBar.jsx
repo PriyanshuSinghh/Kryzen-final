@@ -1,5 +1,5 @@
 import React from "react";
-
+import { IconUserCircle } from '@tabler/icons-react';
 export default function NavigationBar() {
   return (
     <>
@@ -57,7 +57,7 @@ export default function NavigationBar() {
                   href="/"
                   className="nav-link d-flex lh-1 text-reset p-0 my-2"
                 >
-                  <span className="user-avatar avatar" />
+                  <IconUserCircle stroke={2} />
                   <div className="d-none d-xl-block pl-2">
                     <div>Test Account</div>
                     <div className="mt-1 small text-muted">
