@@ -29,7 +29,7 @@ export default function Broccoli() {
       <div>
         <NavigationBar />
       </div>
-      {/* Page header */}
+
       <div className="page-header d-print-none">
         <div className="container">
           <div className="row g-3 align-items-center">
@@ -192,14 +192,12 @@ export default function Broccoli() {
         </div>
         <LineChart />
 
-        {/* Page body */}
         <div className="page-body">
           <div className="container-xl">
             <div className="row row-cards">
               <div className="col-12">
                 <div className="card">
                   <div className="card-table table-responsive">
-                    {/* Render broccoli data in a table */}
                     <table className="table">
                       <thead>
                         <tr>
