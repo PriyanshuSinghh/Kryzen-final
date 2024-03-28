@@ -57,7 +57,7 @@ export default function NavigationBar() {
                   href="/"
                   className="nav-link d-flex lh-1 text-reset p-0 my-2"
                 >
-                  <IconUserCircle stroke={2} />
+                  <IconUserCircle stroke={1} />
                   <div className="d-none d-xl-block pl-2">
                     <div>Test Account</div>
                     <div className="mt-1 small text-muted">
